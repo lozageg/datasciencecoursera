@@ -1,0 +1,137 @@
+Code School
+1.25 The Final Push
+Great! You now have a little taste of the greatness of Git. You can take a look at the wrap up page for a little more information on Git and GitHub, oh, and of course your badge!
+
+Wrap it all Up
+
+Close
+Minimize
+Maximize
+TryGit—1300x309
+
+Press enter to submit commands
+ 
+> git branch clean_up
+ 
+
+
+
+Success!
+
+$ git branch
+ 
+
+  clean_up
+* master
+
+Use 'git checkout' to switch to the 'clean_up' branch
+
+$ git checkout clean_up
+ 
+
+Switched to branch 'clean_up'
+
+Success!
+
+$ git rm '*.txt'
+ 
+
+rm 'blue_octocat.txt'
+rm 'octocat.txt'
+rm 'octofamily/baby_octocat.txt'
+rm 'octofamily/momma_octocat.txt'
+rm 'red_octocat.txt'
+
+Success!
+
+$ git status
+ 
+
+# On branch clean_up
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	deleted:    blue_octocat.txt
+#	deleted:    octocat.txt
+#	deleted:    octofamily/baby_octocat.txt
+#	deleted:    octofamily/momma_octocat.txt
+#	deleted:    red_octocat.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	octofamily/
+
+Did not use git commit
+
+$ git commit -m "Remove all the cats"
+ 
+
+[clean_up 63540fe] Remove all the cats
+ 5 files changed, 5 deletions(-)
+ delete mode 100644 blue_octocat.txt
+ delete mode 100644 octocat.txt
+ delete mode 100644 octofamily/baby_octocat.txt
+ delete mode 100644 octofamily/momma_octocat.txt
+ delete mode 100644 red_octocat.txt
+
+Success!
+
+$ git checkout master
+ 
+
+Switched to branch 'master'
+
+Success!
+
+$ git merge clean_up
+ 
+
+Updating 3852b4d..ec6888b
+Fast-forward
+ blue_octocat.txt             |    1 -
+ octocat.txt                  |    1 -
+ octofamily/baby_octocat.txt  |    1 -
+ octofamily/momma_octocat.txt |    1 -
+ red_octocat.txt              |    1 -
+ 5 files changed, 5 deletions(-)
+ delete mode 100644 blue_octocat.txt
+ delete mode 100644 octocat.txt
+ delete mode 100644 octofamily/baby_octocat.txt
+ delete mode 100644 octofamily/momma_octocat.txt
+ delete mode 100644 red_octocat.txt
+
+Success!
+
+$ git branch -d clean_up
+ 
+
+Deleted branch clean_up (was ec6888b).
+
+Success!
+
+$ git push
+ 
+
+To https://github.com/try-git/try_git.git
+   3e70b0f..17d2002  master -> master
+
+Success!
+
+> 
+Close
+Minimize
+Maximize
+My Octobox Repository
+.git
+octofamily
+yellow_octocat.txt
+Advice
+Learning more about Git
+We only scratched the surface of Git in this course. There is so much more you can do with it. Check out the Git documentation for a full list of functions.
+The Pro Git book, by Scott Chacon, is an excellent resource to teach you the inner workings of Git.
+help.github and GitHub Training are also great for anything related to Git in general and using Git with GitHub.
+Code SchoolGitHub
+Share With Your Friends Share With Your Friends on Facebook
+Tweet Your Progress Tweet Your Progress
+Need support?
