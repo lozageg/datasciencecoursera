@@ -1,0 +1,196 @@
+
+peter@peter-PC MINGW64 ~/desktop
+$ ls
+~$ndit layout.docx  ~WRL3377.tmp  Data Science/        OMSI.docx
+~$relay.docx        001.jpg       desktop.ini          Piano/
+~WRL2141.tmp        Apps/         NES_Profile_301.pdf  Spanish/
+
+peter@peter-PC MINGW64 ~/desktop
+$ cd Data Science/
+bash: cd: Data: No such file or directory
+
+peter@peter-PC MINGW64 ~/desktop
+$ cd Data_Science
+bash: cd: Data_Science: No such file or directory
+
+peter@peter-PC MINGW64 ~/desktop
+$ ^C
+
+peter@peter-PC MINGW64 ~/desktop
+$
+
+peter@peter-PC MINGW64 ~/desktop
+$ clear
+
+peter@peter-PC MINGW64 ~/desktop
+$ cd datascience
+
+peter@peter-PC MINGW64 ~/desktop/datascience
+$ cd datasciencecoursera
+
+peter@peter-PC MINGW64 ~/desktop/datascience/datasciencecoursera (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+peter@peter-PC MINGW64 ~/desktop/datascience/datasciencecoursera (master)
+$ cd ..
+
+peter@peter-PC MINGW64 ~/desktop/datascience
+$ cd practice
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice
+$ git init
+Initialized empty Git repository in C:/Users/peter/Desktop/datascience/practice/           .git/
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ touch wow.md
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ touch wow.txt
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        wow.md
+        wow.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git add wow.md wow.txt
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   wow.md
+        new file:   wow.txt
+
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git commit -m"wow yay"
+[master (root-commit) 82c692c] wow yay
+ 2 files changed, 12 insertions(+)
+ create mode 100644 wow.md
+ create mode 100644 wow.txt
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git log
+commit 82c692ce18410a1679387c8898d282e9e1cf6b17
+Author: lozageg <ginwhy@gmail.com>
+Date:   Tue Dec 15 22:08:17 2015 -0800
+
+    wow yay
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git remote add origin https://github.com/lozageg/practice.git
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 339 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/lozageg/practice.git
+ * [new branch]      master -> master
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git pull origin master
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From https://github.com/lozageg/practice
+ * branch            master     -> FETCH_HEAD
+   82c692c..dab845c  master     -> origin/master
+Updating 82c692c..dab845c
+Fast-forward
+ README.md | 2 ++
+ hmm       | 1 +
+ 2 files changed, 3 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 hmm
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git diff HEAD
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git add practice/phew
+fatal: pathspec 'practice/phew' did not match any files
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git add practice/phew.txt
+fatal: pathspec 'practice/phew.txt' did not match any files
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git add phew.txt
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git diff --staged
+diff --git a/phew.txt b/phew.txt
+new file mode 100644
+index 0000000..4a9e80b
+--- /dev/null
++++ b/phew.txt
+@@ -0,0 +1 @@
++phew!
+\ No newline at end of file
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git reset phew.txt
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git add phew.txt
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git push origin master
+Everything up-to-date
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   phew.txt
+
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git commit -m"phew"
+[master b96e2d5] phew
+ 1 file changed, 1 insertion(+)
+ create mode 100644 phew.txt
+
+peter@peter-PC MINGW64 ~/desktop/datascience/practice (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 260 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/lozageg/practice.git
+   dab845c..b96e2d5  master -> master
+
+
